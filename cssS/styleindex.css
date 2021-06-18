@@ -1,0 +1,252 @@
+body{
+    font-family: 'Raleway';
+    margin:0;
+    color:black;
+    padding:0;
+   
+}
+/* header */
+.header{
+    margin:0;
+    width: 100%;
+    background-color: white;
+    color:red;
+    position: fixed;
+    z-index: 10;
+   
+    
+   
+}
+.nav{
+    z-index: 10; 
+}
+.header__btnMenu{
+    background: transparent;
+    font-size: 30px;
+    border:none;
+    float:right;
+    cursor: pointer;
+    margin-top: 3.0%;;
+
+}
+.logo{
+    width: 60px;
+}
+.header a{
+   
+    padding:16px 22px;
+    text-align: center;
+    display: block;
+    max-width: 100%;
+    text-decoration: none; 
+    color:black;
+    font-size: 20px;
+    
+} 
+.header a:first-child{
+    border-top:rgb(255, 154, 4) 3px solid; 
+}
+.header a:hover{
+    background-color: rgb(255, 154, 4); 
+    color:white;
+}  
+
+/* banner start */
+.start{
+    background: url(../start-img.jpg);
+    background-position: center left; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    transition:  1s ease;
+    z-index: 1;
+}
+.start-text{
+    padding: 100px;
+    text-align:center; 
+    color:white;
+    font-weight: 700; 
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
+    
+
+  
+
+}
+.menu-h{
+    text-align: center;padding: 8px 12px;
+    font-weight: normal;
+}
+/* fazer efeito hover na resolução de tela grande */
+/* foods */ 
+.foods img{
+    width:100%;
+    height: 100%;
+    transform: translateZ(0)
+}
+.foods{
+    max-width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    grid-auto-rows: auto;
+    
+}
+
+/* fazer efeito hover nas foods imgs */
+.e-card{
+    
+    width:100%;
+    border: 1px solid #ccc
+}
+.e-card-img img{
+    height: 200px;
+    width: 100%;
+    transform: translateZ(0)
+}
+.e-card-txt{
+   
+   text-align: center;
+}
+.employes{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:25px;
+    padding: 5px;
+    max-width: 100%;
+    grid-auto-rows: auto;
+} 
+
+/* quotes */
+
+.quotes{
+    
+    background: rgb(255, 154, 4);
+    font-size: 22px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.map iframe{
+    display: block;
+    margin:auto;
+    width: 100%;
+}
+
+
+.js .quotes{
+    position:relative;
+    display:flex;
+} 
+
+.js .quotes .qt{
+    position:absolute;
+    opacity: 0;
+    width: 100%;
+    top:0;
+    left:0;
+} 
+.js .quotes .show{
+    opacity: 1;
+    position:static;
+} 
+
+.js .quotes .prev, .js .quotes .next{
+    z-index: 3;
+    color:white;
+    position:absolute;
+    top:50%;
+}
+.js .quotes .prev{
+    left:10px;
+}
+.js .quotes .next{
+    right: 10px;
+    
+}
+/* footer */
+
+.footer{
+    display: flex;
+    flex-direction: row; 
+   
+    padding: 18px;
+    color:rgb(1, 10, 22);
+    background:rgb(134, 81, 0);
+} 
+
+.footer a{
+    display:block;
+    color:rgb(1, 10, 22);
+    text-decoration: none;
+} 
+.footer li{
+    list-style-type: none;
+}
+.footer p, ul{
+    padding: 10px;
+}
+
+/* responsividade */
+
+@media screen and (min-width:1000px) {
+    .header__btnMenu{
+        display: none;
+    }
+    .header{
+        display:flex;
+    }
+    .header a:first-child{
+        border:none;
+    }
+    
+    .header .nav{
+      display: flex;
+      flex-direction: row-reverse;
+        width:100%;
+       
+    }
+    .header .nav a{
+        float:left;
+       
+        height: 30px;
+        
+    } 
+
+    .start-text{
+        padding: 250px;
+    } 
+
+    .menu-h{
+        padding: 32px;
+        font-weight: normal;
+    }
+    
+    .foods{
+        grid-template-columns: repeat(6,1fr);
+    }
+    .foods img{
+        transition: 1s ease;
+    
+    }
+    
+    .foods img:hover{
+        transform: scale(1.2);
+        z-index:1;
+    }
+    .employes{
+        margin: 30px 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .footer p,ul{
+     padding: 100px 20px;   
+    }
+    .map{
+        
+    }
+    .map iframe{
+        width: 1000px;
+        height: 500px;
+
+    }
+
+    
+
+}
